@@ -26,10 +26,10 @@ class Post_model extends CI_Model
 	public function create_post($post_image)
  	{
  		$slug = url_title($this->input->post('title'));
- 		    $this->db->select('count(*) as slugcount');
-    		$this->db->from('posts');
-    		$this->db->where('slug', $slug);
-    		$query = $this->db->get();
+ 		$this->db->select('count(*) as slugcount');
+    	$this->db->from('posts');
+    	$this->db->where('slug', $slug);
+    	$query = $this->db->get();
 		$slugcount = $query->row(0)->slugcount;
 		if ($slugcount > 0) {
 		    $slug = $slug."-".$slugcount;
