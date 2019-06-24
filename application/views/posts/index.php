@@ -16,4 +16,4 @@
 
 	
 <?php endforeach; ?>
-<?php echo $this->pagination->create_links(); ?>
+<center><?php echo $this->pagination->create_links(); ?></center>

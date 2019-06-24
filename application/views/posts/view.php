@@ -7,7 +7,7 @@
 
 <?php if($this->session->userdata('user_id') == $post['user_id']): ?>
 <hr>
-<a class="btn btn-info pull-left" href="edit/<?php echo $post['id']; ?>">Edit</a>
+<a class="btn btn-info pull-left" href="edit/<?php echo $post['slug']; ?>">Edit</a>
 <?php echo form_open('/posts/delete/'.$post['id']); ?>
 <input type="submit" class="btn btn-danger" value="Delete">
 </form>
